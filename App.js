@@ -1,9 +1,15 @@
 import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 import Login from './components/Login';
- // ajuste o caminho se precisar
+import Cadastro from './components/Cadastro';
 
 function App() {
-  return <Login />;
+  return (
+    <Routes>
+      <Route path="/" element={<Login />} />
+      <Route path="/cadastro" element={<Cadastro />} />
+    </Routes>
+  );
 }
 
 export default App;
